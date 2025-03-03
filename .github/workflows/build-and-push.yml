@@ -33,7 +33,7 @@ jobs:
 
       # 构建Docker镜像（支持多平台）
       - name: Build Docker image for multiple platforms
-        run: docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6,linux/386,linux/ppc64le,linux/s390x -t $IMAGE_NAME . --push
+        run: docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6,linux/s390x -t $IMAGE_NAME . --push
 
       # 推送Docker镜像到DockerHub（此步骤实际上在上面的构建命令中已经包含）
       # - name: Push Docker image
